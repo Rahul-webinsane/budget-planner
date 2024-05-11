@@ -1,0 +1,25 @@
+<div class="transcation-container">
+        <h3>Add Transaction</h3>
+        <div class="transaction-form">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" formControlName="title">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount" formControlName="amount">
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" formControlName="type">
+                        <option selected value="">Please Select Type</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <button class="form-btn" type="submit">Submit</button>
+            </form>
+            
+        </div>
+</div>

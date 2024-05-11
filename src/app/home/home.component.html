@@ -1,0 +1,11 @@
+<div class="home-container">
+    <div class="money-card-container">
+        <ng-container *ngFor="let items of moneyCardDetails">
+            <app-money-cards [svgIcon]="items.path" headingOne="{{items.heading}}" amount="{{items.amount}}" ></app-money-cards>
+        </ng-container>
+    </div>
+    <div class="content-section">
+        <app-transaction></app-transaction>
+        <app-history></app-history>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "SVG 1",
+        "path": "assets/svg/wallet.svg",
+        "heading":"Your Balance",
+        "amount":12000
+    },
+    {
+        "id": 2,
+        "name": "SVG 2",
+        "path": "assets/svg/cash.svg",
+        "heading":"Your Income",
+        "amount":560
+    },
+    {
+        
+        "id": 2,
+        "name": "SVG 2",
+        "path": "assets/svg/rupees.svg",
+        "heading":"Your Expense",
+        "amount":900
+    }
+]
