@@ -1,7 +1,7 @@
 {
     "builds": [
       {
-        "src": "path/to/your/source",
+        "src": "src",
         "use": "@vercel/node",
         "config": { "maxLambdaSize": "50mb" },
         "buildCommand": "npm install --force && npm run build"
