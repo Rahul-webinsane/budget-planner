@@ -1,12 +1,11 @@
-
-<div class="money-card">
-    <div class="inner-card">
-        <div class="wallet">
-            <img [src]="svgIcon" alt="SVG Image">
-        </div>
-        <div>
-            <p>{{headingOne}}</p>
-            <span>RS {{amount}}</span>
-        </div>
-    </div>
-</div>
+    <div class="card-body" [ngStyle]="{ 'background-color': bgColor ,'width':'18rem','height':'6rem', 'border-radius': '20px'}" >
+            <div class="d-flex">
+                <div class="col-6 wallet" [ngStyle]="{ 'background-color': iconBgColor }">
+                    <img class="item-svg-icon" [src]="svgIcon" alt="SVG Image">
+                </div>
+                <div class="col-6">
+                    <p>{{headingOne}}</p>
+                    <span><strong>RS {{amount}}</strong></span>
+                </div>
+            </div>
+      </div>

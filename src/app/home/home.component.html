@@ -1,11 +1,17 @@
-<div class="home-container">
-    <div class="money-card-container">
-        <ng-container *ngFor="let items of moneyCardDetails">
-            <app-money-cards [svgIcon]="items.path" headingOne="{{items.heading}}" amount="{{items.amount}}" ></app-money-cards>
-        </ng-container>
+
+<div class="container">
+    <div class="row d-flex flex-wrap g-3 justify-content-between mb-4" >
+        <div class="col-sm-12 col-lg-3 col-xl-3 " *ngFor="let items of moneyCardDetails">
+                <app-money-cards [iconBgColor]="items.iconBgColor" [bgColor]="items.bgcolor" [svgIcon]="items.path" headingOne="{{items.heading}}" amount="{{items.amount}}" ></app-money-cards>
+        </div>
     </div>
-    <div class="content-section">
-        <app-transaction></app-transaction>
-        <app-history></app-history>
-    </div>
+        <div class="row d-flex flex-wrap g-5">
+            <div class="col-sm-12 col-lg-6 col-xl-6">
+                <app-transaction></app-transaction>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-xl-6">
+                <app-history></app-history>
+            </div>
+        </div>
 </div>
+

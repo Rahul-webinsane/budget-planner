@@ -4,14 +4,18 @@
         "name": "SVG 1",
         "path": "assets/svg/wallet.svg",
         "heading":"Your Balance",
-        "amount":12000
+        "amount":12000,
+        "bgcolor":"rgba(234,253,207,255)",
+        "iconBgColor":"rgba(185,242,110,255)"
     },
     {
         "id": 2,
         "name": "SVG 2",
         "path": "assets/svg/cash.svg",
         "heading":"Your Income",
-        "amount":560
+        "amount":560,
+        "bgcolor":"rgba(201,249,255,255)",
+        "iconBgColor":"rgba(74,232,249,255)"
     },
     {
         
@@ -19,6 +23,8 @@
         "name": "SVG 2",
         "path": "assets/svg/rupees.svg",
         "heading":"Your Expense",
-        "amount":900
+        "amount":900,
+        "bgcolor":"rgba(237,234,253,255)",
+        "iconBgColor":"rgba(201,177,253,255)"
     }
 ]

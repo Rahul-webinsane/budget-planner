@@ -16,6 +16,11 @@ export class MoneyCardsComponent implements OnInit,AfterViewInit{
   @Input('svgArray') 
   svgArray!:any;
 
+  @Input('bgColor') 
+  bgColor!:string;
+  @Input('iconBgColor') 
+  iconBgColor!:string;
+
 
   ngOnInit(): void {
     console.log("on changes----",this.svgIcon);

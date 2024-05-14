@@ -25,4 +25,8 @@ export class TransactionComponent {
       console.log("form value i -----",this.form.value);
       
   }
+
+  reset(){
+    this.form.reset();
+  }
 }
