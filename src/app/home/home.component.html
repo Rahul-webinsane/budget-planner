@@ -1,17 +1,28 @@
 
-<div class="container">
-    <div class="row d-flex flex-wrap g-3 justify-content-between mb-4" >
-        <div class="col-sm-12 col-lg-3 col-xl-3 " *ngFor="let items of moneyCardDetails">
-                <app-money-cards [iconBgColor]="items.iconBgColor" [bgColor]="items.bgcolor" [svgIcon]="items.path" headingOne="{{items.heading}}" amount="{{items.amount}}" ></app-money-cards>
+<div class="container mt-5">
+    <app-header></app-header>
+</div>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <ng-container *ngFor="let items of moneyCardDetails">
+                <div class="m-4">
+                    <app-money-cards [iconBgColor]="items.iconBgColor" [bgColor]="items.bgcolor" [svgIcon]="items.path" headingOne="{{items.heading}}" amount="{{items.amount}}"></app-money-cards>
+                </div>
+            </ng-container>
         </div>
     </div>
+    
+   
+    <div class="container">
         <div class="row d-flex flex-wrap g-5">
             <div class="col-sm-12 col-lg-6 col-xl-6">
-                <app-transaction></app-transaction>
+                    <app-transaction></app-transaction>
             </div>
             <div class="col-sm-12 col-lg-6 col-xl-6">
                 <app-history></app-history>
             </div>
         </div>
-</div>
+    </div>
+   
+<!-- </div> -->
 

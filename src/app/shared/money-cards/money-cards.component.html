@@ -1,11 +1,10 @@
-    <div class="card-body" [ngStyle]="{ 'background-color': bgColor ,'width':'18rem','height':'6rem', 'border-radius': '20px'}" >
-            <div class="d-flex">
-                <div class="col-6 wallet" [ngStyle]="{ 'background-color': iconBgColor }">
-                    <img class="item-svg-icon" [src]="svgIcon" alt="SVG Image">
-                </div>
-                <div class="col-6">
-                    <p>{{headingOne}}</p>
-                    <span><strong>RS {{amount}}</strong></span>
-                </div>
-            </div>
-      </div>
+
+    <div class="card-body d-flex" [ngStyle]="{ 'background-color': bgColor ,'width':'18rem','height':'6rem', 'border-radius': '20px'}" >
+        <div class="col-3 d-flex align-items-center justify-content-center rounded-circle m-2" [ngStyle]="{ 'background-color': iconBgColor }">
+            <img class="item-svg-icon" [src]="svgIcon" alt="SVG Image">
+        </div>
+        <div class="col-9 align-content-center">
+            <p>{{headingOne}}</p>
+            <p><strong>RS {{amount}}</strong></p>
+        </div>
+    </div>
