@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'moneymanager';
+  isLogged:boolean=false;
+  
+  constructor(public auth:AuthService){
+    const retrievedValue:any = localStorage.getItem('userLogged');
+    console.log("user logged",retrievedValue);
+    
+   this.isLogged = retrievedValue;
+  }
 }

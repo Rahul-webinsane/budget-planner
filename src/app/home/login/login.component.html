@@ -1,0 +1,71 @@
+<div class="container-fluid full-width-height-container">
+    <div class="row" style="height: 100vh;">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="col-sm-4 col-md-6 col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        {{ showSignupForm ? 'Signup' : 'Login' }}
+                    </div>
+                    <div class="card-body">
+                        <!-- Login Form -->
+                        <form *ngIf="!showSignupForm" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Email address</label>
+                                <input type="userName" class="form-control" id="userName" formControlName="userName" placeholder="Enter userName">
+                                <div *ngIf="fLogin.userName.errors" class="invalid-feedback">
+                                    <div *ngIf="fLogin.userName.errors.required">userName is required</div>
+                                    <div *ngIf="fLogin.userName.errors.userName">Invalid userName format</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+                                <div *ngIf="fLogin.password.errors" class="invalid-feedback">
+                                    <div *ngIf="fLogin.password.errors.required">Password is required</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- Signup Form -->
+                        <form *ngIf="showSignupForm" [formGroup]="signupForm" (ngSubmit)="onSubmitSignup()">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="Enter first name">
+                                <div *ngIf="fSignup.firstName.errors" class="invalid-feedback">
+                                    First name is required
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter last name">
+                                <div *ngIf="fSignup.lastName.errors" class="invalid-feedback">
+                                    Last name is required
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email">
+                                <div *ngIf="fSignup.email.errors" class="invalid-feedback">
+                                    <div *ngIf="fSignup.email.errors.required">Email is required</div>
+                                    <div *ngIf="fSignup.email.errors.email">Invalid email format</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+                                <div *ngIf="fSignup.password.errors" class="invalid-feedback">
+                                    Password is required
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <button type="button" class="btn btn-link" (click)="toggleSignupForm()">
+                            {{ showSignupForm ? 'Back to Login' : 'Signup' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>

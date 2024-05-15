@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './shared/history/history.component';
 import { TransactionComponent } from './shared/transaction/transaction.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './home/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     MoneyCardsComponent,
     HistoryComponent,
-    TransactionComponent
+    TransactionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
