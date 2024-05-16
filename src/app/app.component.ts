@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { DarkmodeService } from './services/darkmode.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,9 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
   title = 'moneymanager';
   isLogged:boolean=false;
-  
-  constructor(public auth:AuthService){
+  isDarkMode:boolean=false;
+  constructor(public auth:AuthService,public darkModeSauthervice: DarkmodeService){
     const retrievedValue:any = localStorage.getItem('userLogged');
-    console.log("user logged",retrievedValue);
-    
-   this.isLogged = retrievedValue;
+    this.isLogged = retrievedValue;
   }
 }
