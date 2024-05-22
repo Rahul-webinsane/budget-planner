@@ -13,6 +13,10 @@ import { HistoryComponent } from './shared/history/history.component';
 import { TransactionComponent } from './shared/transaction/transaction.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './home/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastComponent } from './shared/toast/toast.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +28,15 @@ import { LoginComponent } from './home/login/login.component';
     MoneyCardsComponent,
     HistoryComponent,
     TransactionComponent,
-    LoginComponent
+    LoginComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

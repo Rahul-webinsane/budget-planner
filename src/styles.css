@@ -5,7 +5,6 @@
 }
 
 
-
 /* :root {
     --primary-color: #007bff;
     --background-color: #ffffff; 
@@ -94,10 +93,34 @@
 .transaction-card{
     width: 500px;
     height: 500px;
+   
 }
 
 .history-card{
     width: 500px;
-    height: 500px;
+    /* height: 500px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 368px;
 }
 
+
+.card-bodys {
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* max-height: 340px; Set a max height for the scroll area */
+  position: relative;
+}
+
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white; /* Ensure header background is not transparent */
+}

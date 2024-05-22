@@ -1,15 +1,23 @@
 <div class="row">
     <div class="card history-card">
-      <div class="card-body">
-        <h3 class="card-title">History</h3>
-        <div>
+      <h3 class="card-title mt-3">History</h3>
+      <div class="card-bodys">
+      
+        <div class="table-responsive">
           <table class="table table-striped">
-            <thead>
+            <thead class="thead-light">
               <tr>
-                <th>Title</th>
-                <th>Amount</th>
-                <th>Type</th>
-                <th></th>
+                <th>Title <svg (click)="toggleSortOrder('title')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="height: 15px; width:15px">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                </svg>
+                </th>
+                <th>Amount <svg (click)="toggleSortOrder('amount')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="height: 15px; width:15px">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                </svg></th>
+                <th>Type <svg (click)="toggleSortOrder('type')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="height: 15px; width:15px">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                </svg></th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>

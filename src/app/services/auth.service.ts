@@ -15,7 +15,8 @@ export class AuthService {
 
 
   constructor(private http:HttpClient,private routes:Router) { 
-      
+    const isLogged:any = localStorage.getItem('userLogged');
+    this.isLoggedIn = isLogged;
   }
 
   login(userDetails:any,loginDetails:any): void {
